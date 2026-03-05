@@ -1,0 +1,28 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>images/white-king.png</file>
+        <file>images/black-king.png</file>
+        <file>images/white-pawn.png</file>
+        <file>images/black-pawn.png</file>
+        <file>images/black-knight.png</file>
+        <file>images/white-knight.png</file>
+        <file>images/white-bishop.png</file>
+        <file>images/black-bishop.png</file>
+        <file>images/white-rook.png</file>
+        <file>images/black-rook.png</file>
+        <file>images/white-queen.png</file>
+        <file>images/black-queen.png</file>
+        <file>images/rect-8x8.png</file>
+        <file>images/ChessLogo.png</file>
+        <file>images/black_400@2x.png</file>
+        <file>images/white_400@2x.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>SFX/move-self.wav</file>
+        <file>SFX/capture.wav</file>
+        <file>SFX/castle.wav</file>
+        <file>SFX/move-check.wav</file>
+        <file>SFX/promote.wav</file>
+        <file>SFX/checkmate.wav</file>
+    </qresource>
+</RCC>
