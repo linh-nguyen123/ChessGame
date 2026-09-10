@@ -12,6 +12,10 @@
 [![Database](https://img.shields.io/badge/Database-SQLite%20%7C%20SQL-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://sqlite.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
+<br/><br/>
+
+<img src="images/demo.png" alt="Qt Chess Game Gameplay Preview" width="750"/>
+
 <br/>
 
 </div>
