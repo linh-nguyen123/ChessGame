@@ -57,42 +57,42 @@ The application adopts an event-driven architecture separating the presentation 
 
 ```mermaid
 graph TD
-    subgraph UI Layer ["Presentation Layer (Qt GUI)"]
+    subgraph UI_Layer ["Presentation Layer (Qt GUI)"]
         MW["MainWindow"]
-        CB["ChessBox & Board Grid"]
+        CB["ChessBox and Board Grid"]
     end
 
-    subgraph Core ["Game Control & Orchestration"]
+    subgraph Core_Layer ["Game Control and Orchestration"]
         Game["Game Controller (game.cpp)"]
         Pieces["ChessPiece Hierarchy"]
     end
 
-    subgraph Engine ["Asynchronous AI Subsystem"]
+    subgraph Engine_Layer ["Asynchronous AI Subsystem"]
         SM["StockfishManager (Singleton)"]
         QProc["QProcess (Subprocess Pipe)"]
         SF["Stockfish Binary (UCI Protocol)"]
     end
 
-    subgraph DB ["Persistence Layer"]
+    subgraph DB_Layer ["Persistence Layer"]
         DM["DatabaseManager (Singleton)"]
         SQL[("SQL Database")]
     end
 
-    CB -->|User Click / Move| Game
-    Game -->|Validate Movement| Pieces
-    Game -->|Update Board View| MW
+    CB -->|"User Click or Move"| Game
+    Game -->|"Validate Movement"| Pieces
+    Game -->|"Update Board View"| MW
     
     %% AI Pipeline
-    Game -->|Generate FEN & Request Move| SM
-    SM -->|Write 'position fen ...' & 'go movetime'| QProc
-    QProc -->|Standard I/O| SF
-    SF -->|'bestmove e2e4'| QProc
-    QProc -->|readyReadStandardOutput| SM
-    SM -->|Emit bestMoveReady(move)| Game
+    Game -->|"Generate FEN and Request Move"| SM
+    SM -->|"Send FEN and movetime"| QProc
+    QProc -->|"Standard I/O"| SF
+    SF -->|"bestmove response"| QProc
+    QProc -->|"readyReadStandardOutput"| SM
+    SM -->|"Signal: bestMoveReady"| Game
     
     %% Database Pipeline
-    Game -->|Log Move & Record Outcome| DM
-    DM -->|QSqlQuery Execution| SQL
+    Game -->|"Log Move and Record Outcome"| DM
+    DM -->|"QSqlQuery Execution"| SQL
 ```
 
 ---
