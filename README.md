@@ -25,7 +25,7 @@
 - [Technical Highlights & Design Patterns](#-technical-highlights--design-patterns)
 - [Repository Structure](#-repository-structure)
 - [Getting Started & Build Instructions](#-getting-started--build-instructions)
-- [Future Enhancements](#-future-enhancements)
+- [Author & Contributions](#-author--contributions)
 - [License](#-license)
 
 ---
@@ -173,11 +173,10 @@ ChessGame/
 
 ---
 
-## 🗺️ Future Enhancements
-- [ ] Support for opening book libraries (.bin / Polyglot).
-- [ ] Evaluation bar display reflecting real-time centipawn advantage from Stockfish.
-- [ ] Export and import matches in standard PGN (Portable Game Notation) format.
-- [ ] Networked multiplayer via WebSockets / TCP sockets.
+## 👨‍💻 Author & Contributions
+- **Author**: Nguyen Linh (Lucas)
+- **GitHub**: [@linh-nguyen123](https://github.com/linh-nguyen123)
+- **Contributions**: Feel free to fork, submit issues, or open pull requests to enhance the engine or GUI!
 
 ---
 
